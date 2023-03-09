@@ -6,6 +6,8 @@ public class PlayerControllerR : MonoBehaviour
 {
     private Rigidbody playerRb;
     private Animator playerAnim;
+    public ParticleSystem explosionParticle;
+    public ParticleSystem dirtParticle;
     private float jumpForce = 2250;
     private float gravityModifier = 5;
     private bool isOnGround = false;
@@ -22,11 +24,16 @@ public class PlayerControllerR : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver)
+
+        AnimatorStateInfo stateInfo = playerAnim.GetCurrentAnimatorStateInfo(3);
+
+
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver && stateInfo.IsName("Run"))
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             playerAnim.SetTrigger("Jump_b");
             swapOnGroundStatus();
+            dirtParticle.Stop();
         }
     }
 
@@ -39,7 +46,8 @@ public class PlayerControllerR : MonoBehaviour
         else if (collision.gameObject.CompareTag("Ground"))
         {
             playerAnim.ResetTrigger("Jump_b");
-            Invoke("swapOnGroundStatus", 0.3f);
+            dirtParticle.Play();
+            swapOnGroundStatus();
         }
     }
 
@@ -54,5 +62,7 @@ public class PlayerControllerR : MonoBehaviour
         Debug.Log("Game Over");
         playerAnim.SetInteger("DeathType_int", 1);
         playerAnim.SetBool("Death_b", true);
+        explosionParticle.Play();
+        dirtParticle.Stop();
     }
 }

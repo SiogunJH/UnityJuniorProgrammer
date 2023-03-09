@@ -36,7 +36,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Prototype 3\RepeatBackgroundR.cs" />
      <Compile Include="Assets\Scripts\Other 1\Cube.cs" />
+     <Compile Include="Assets\Scripts\Prototype 3\SpawnManagerR.cs" />
      <Compile Include="Assets\Scripts\Prototype 2\SpawnManager.cs" />
      <Compile Include="Assets\Scripts\Prototype 1\ConstForwardMovement.cs" />
      <Compile Include="Assets\Scripts\Challenge 2\SpawnManagerY.cs" />
@@ -47,6 +49,8 @@
      <Compile Include="Assets\Scripts\Challenge 2\DestroyOutOfBoundsY.cs" />
      <Compile Include="Assets\Scripts\Prototype 1\FollowPlayer.cs" />
      <Compile Include="Assets\Scripts\Prototype 3\PlayerControllerR.cs" />
+     <Compile Include="Assets\Scripts\Prototype 3\MoveLeftR.cs" />
+     <Compile Include="Assets\Scripts\Prototype 3\MoveForwardR.cs" />
      <Compile Include="Assets\Scripts\Challenge 2\MoveForwardY.cs" />
      <Compile Include="Assets\Scripts\Prototype 2\MoveForward.cs" />
      <Compile Include="Assets\Scripts\Challenge 1\PlayerControllerX.cs" />
@@ -55,10 +59,6 @@
      <Compile Include="Assets\Scripts\Challenge 2\DetectCollisionsY.cs" />
      <Compile Include="Assets\Scripts\Prototype 1\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Prototype 1\PlayerControllerAlt.cs" />
-     <Compile Include="Assets\Scripts\Prototype 3\MoveForwardR.cs" />
-     <Compile Include="Assets\Scripts\Prototype 3\MoveLeftR.cs" />
-     <Compile Include="Assets\Scripts\Prototype 3\SpawnManagerR.cs" />
-     <Compile Include="Assets\Scripts\Prototype 3\RepeatBackgroundR.cs" />
      <None Include="Assets\Course Library\Materials\UnlitVertexColour_Alpha.shader" />
     <Reference Include="UnityEngine">
         <HintPath>E:\Aplikacje\Unity Editor\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
